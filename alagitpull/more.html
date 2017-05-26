@@ -6,11 +6,11 @@
 
 <ul>
   {%- for project in theme_projects %}
-  <li>{%- if project.name != shorttitle %}<a href="{{project.url}}">{%- endif %}{{ project.name }}{%- if project.name != shorttitle %}</a>{% endif %} 
+  <li>{%- if project.name != theme_project_name %}<a href="{{project.url}}">{%- endif %}{{ project.name }}{%- if project.name != theme_project_name %}</a>{% endif %} 
   {% if 'subprojects' in project -%}
   <small>(
   {%- for subproject in project.subprojects -%} 
-  {%- if subproject.name != shorttitle -%}<a href="{{subproject.url}}">{%- endif -%}{{ subproject.name }}{%- if subproject.name != shorttitle -%}</a>{%- endif -%}
+  {%- if subproject.name != theme_project_name -%}<a href="{{subproject.url}}">{%- endif -%}{{ subproject.name }}{%- if subproject.name != theme_project_name -%}</a>{%- endif -%}
   {%- endfor -%}
   )</small>
   {%- endif -%}
