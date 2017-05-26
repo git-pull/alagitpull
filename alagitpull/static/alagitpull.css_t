@@ -5,7 +5,7 @@ div#changelog > div.section > ul > li > p:only-child {
 }
 
 @media screen and (max-width: 768px) {
-    #fork-gh img {
+    #fork-gh img, a.github img {
         display: none;
     }
 }
