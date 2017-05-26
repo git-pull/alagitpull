@@ -5,10 +5,17 @@
 <p>More open source projects from <a href="https://www.git-pull.com">Tony Narlock</a>:</p>
 
 <ul>
-  <li><a href="https://unihan-etl.git-pull.com">unihan-etl</a></li>
-  <li><a href="https://cihai.git-pull.com">cihai</a> (<a href="https://cihai-cli.git-pull.com">cli</a>)</li>
-  <li><a href="https://tmuxp.git-pull.com">tmuxp</a> <small>(<a href="https://libtmux.git-pull.com">libtmux</a>)</small></li>
-  <li><a href="https://vcspull.git-pull.com">vcspull</a> <small>(<a href="https://libvcs.git-pull.com">libvcs</a>)</small></li>
+  {%- for project in theme_projects %}
+  <li>{%- if project.name != shorttitle %}<a href="{{project.url}}">{%- endif %}{{ project.name }}{%- if project.name != shorttitle %}</a> {% endif -%}
+  {%- if 'subprojects' in project -%}
+  (
+  {%- for subproject in project.subprojects -%} 
+  {%- if subproject.name != shorttitle -%}<a href="{{subproject.url}}">{%- endif -%}{{ subproject.name }}{%- if subproject.name != shorttitle -%}</a>{%- endif -%}
+  {%- endfor -%}
+  )
+  {%- endif -%}
+  </li>
+  {%- endfor %}
 </ul>
 
 <a href="https://github.com/{{theme_github_user}}/{{theme_github_repo}}" id="fork-gh">

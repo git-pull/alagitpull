@@ -3,6 +3,36 @@ import os
 from alagitpull import _version as version
 
 
+projects = [
+    {
+        'name': 'unihan-etl',
+        'url': 'https://unihan-etl.git-pull.com',
+    }, {
+        'name': 'cihai',
+        'url': 'https://cihai.git-pull.com',
+        'subprojects': [{
+            'name': 'cli',
+            'url': 'https://cihai-cli.git-pull.com',
+        }]
+    }, {
+        'name': 'tmuxp',
+        'url': 'https://tmuxp.git-pull.com',
+        'subprojects': [{
+            'name': 'libtmux',
+            'url': 'https://libtmux.git-pull.com',
+        }]
+    },
+    {
+        'name': 'vcspull',
+        'url': 'https://vcspull.git-pull.com',
+        'subprojects': [{
+            'name': 'libvcs',
+            'url': 'https://libvcs.git-pull.com',
+        }]
+    }
+]
+
+
 def get_path():
     """
     Shortcut for users whose theme is next to their conf.py.
