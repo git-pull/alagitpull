@@ -1,9 +1,4 @@
-<h3>Other Projects</h3>
-
-<p><iframe src="https://ghbtns.com/github-btn.html?user=tony&type=follow&count=false" frameborder="0" scrolling="0" width="170px" height="20px"></iframe></p>
-
-<p>More open source projects from <a href="https://www.git-pull.com">Tony Narlock</a>:</p>
-
+{%- macro projectlist() %}
 <ul>
   {%- for project in theme_projects %}
   <li>{%- if project.name != theme_project_name %}<a href="{{project.url}}">{%- endif %}{{ project.name }}{%- if project.name != theme_project_name %}</a>{% endif %} 
@@ -17,3 +12,20 @@
   </li>
   {%- endfor %}
 </ul>
+{%- endmacro %}
+
+{%- macro follow_me() %}
+<p><iframe src="https://ghbtns.com/github-btn.html?user=tony&type=follow&count=false" frameborder="0" scrolling="0" width="170px" height="20px"></iframe></p>
+{% endmacro %}
+
+{%- block projects_header %}<h3>Other Projects</h3>{% endblock %}
+
+{%- block projects_follow_me %}{{follow_me()}}{%- endblock %}
+
+{%- block more_projects %}<p>More open source projects from <a href="https://www.git-pull.com">Tony Narlock</a>:</p>{% endblock %}
+
+{%- block projects %}
+{{ projectlist() }}
+{% endblock %}
+
+{%- block more_content %}{% endblock %}
