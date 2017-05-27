@@ -38,8 +38,7 @@ div.important,
 div.note,
 div.tip,
 div.seealso, /* sphinx directive */
-div.warning,
- {
+div.warning {
   background-color: #fafbfc;
   border-right: 0;
   border-top: 0;
