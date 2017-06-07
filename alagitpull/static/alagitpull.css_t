@@ -78,13 +78,14 @@ code.literal {
 a.reference, a.reference:hover {
   border-bottom: 0px !important;
   text-decoration-style: dotted;
+  text-decoration-line: underline;
 }
 
 a.reference {
-  text-decoration-color: #004B6B;
+  text-decoration-color: rgba(0, 75, 107, .2);
 }
 
 a.reference:hover {
-  text-decoration-color: #6D4100;
+  text-decoration-color: rgba(109, 65, 0, 0.3);
 }
 /* END alabaster.css override for link styling */
