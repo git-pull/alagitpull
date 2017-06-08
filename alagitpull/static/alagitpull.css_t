@@ -49,13 +49,28 @@ div.seealso {
   border-left: 5px solid #8abb55;
 }
 
-div.note, div.hint, div.tip {
-  border-left: 5px solid #558abb;
+div.note {
+  border-left: 5px solid #6C3082;
+}
 
+div.hint {
+  border-left: 5px solid #8899a6;
+}
+
+div.tip {
+  border-left: 5px solid #eef147;
+}
+
+div.caution {
+  border-left: 5px solid #bb5557;
+}
+
+div.danger, div.error, div.warning {
+  border-left: 5px solid #bb5557;
 }
 
 div.caution, div.danger, div.error, div.warning {
-  border-left: 5px solid #bb5557;
+  background: rgba(160, 17, 17, 0.1);
 }
 
 code::before, code::after {
