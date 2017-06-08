@@ -77,15 +77,15 @@ code.literal {
 /* BEGIN alabaster.css override for link styling */
 a.reference, a.reference:hover {
   border-bottom: 0px !important;
-  text-decoration-style: dotted;
+  text-decoration-style: solid;
   text-decoration-line: underline;
 }
 
 a.reference {
-  text-decoration-color: rgba(0, 75, 107, .2);
+  text-decoration-color: rgba(0, 75, 107, .4);
 }
 
 a.reference:hover {
-  text-decoration-color: rgba(109, 65, 0, 0.3);
+  text-decoration-color: rgba(109, 65, 0, 0.4);
 }
 /* END alabaster.css override for link styling */
