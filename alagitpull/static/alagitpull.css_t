@@ -104,3 +104,20 @@ a.reference:hover {
   text-decoration-color: rgba(109, 65, 0, 0.4);
 }
 /* END alabaster.css override for link styling */
+
+/* BEGIN alabaster.css override for fonts */
+
+pre, tt, code {
+  font-family: "Fira Mono", Consolas, Menlo, Monaco, "Courier New", Courier, monospace !important;
+}
+
+body, div.body h1, div.body h2, div.body h3, div.body h4, div.body h5, div.body h6,
+div.admonition p.admonition-title, div.sphinxsidebar input, div.sphinxsidebar h3,
+div.sphinxsidebar h4 {
+  font-family: "Roboto", Corbel, Avenir, "Lucida Grande", "Lucida Sans", sans-serif !important;
+}
+
+body {
+  font-size: 14px !important;
+}
+/* END alabaster.css override for fonts */
