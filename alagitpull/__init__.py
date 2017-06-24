@@ -7,6 +7,10 @@ projects = [
     {
         'name': 'unihan-etl',
         'url': 'https://unihan-etl.git-pull.com',
+        'subprojects': [{
+            'name': 'db',
+            'url': 'https://unihan-db.git-pull.com',
+        }]
     }, {
         'name': 'cihai',
         'url': 'https://cihai.git-pull.com',
