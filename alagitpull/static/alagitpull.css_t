@@ -29,6 +29,12 @@ pre {
   padding: 7px 20px !important;
 }
 
+div.sidebar {
+  border-top: 5px solid #558abb !important;
+  background-color: #fafbfc !important;
+  padding: 3px !important;
+}
+
 div.admonition,
 div.caution,
 div.danger,
