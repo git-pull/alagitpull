@@ -18,9 +18,13 @@
 <p><iframe src="https://ghbtns.com/github-btn.html?user=tony&type=follow&count=false" frameborder="0" scrolling="0" width="170px" height="20px"></iframe></p>
 {% endmacro %}
 
+{%- macro hire_me() %}
+<p><a href="https://www.git-pull.com/hire-me.html">Hire me</a> (remote)</p>
+{% endmacro %}
+
 {%- block projects_header %}<h3>Other Projects</h3>{% endblock %}
 
-{%- block projects_follow_me %}{{follow_me()}}{%- endblock %}
+{%- block projects_follow_me %}{{follow_me()}}{{hire_me()}}{%- endblock %}
 
 {%- block more_projects %}<p>More open source projects from <a href="https://www.git-pull.com">Tony Narlock</a>:</p>{% endblock %}
 
