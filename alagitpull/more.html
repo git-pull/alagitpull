@@ -18,13 +18,24 @@
 <p><iframe src="https://ghbtns.com/github-btn.html?user=tony&type=follow&count=false" frameborder="0" scrolling="0" width="170px" height="20px"></iframe></p>
 {% endmacro %}
 
-{%- macro hire_me() %}
-<p><a href="https://www.git-pull.com/hire-me.html">Hire me</a> (remote)</p>
+{%- macro lets_do_biz() %}
+<ul>
+<li><a href="https://www.git-pull.com/consulting/">Consulting</a></li>
+<li><a href="https://www.git-pull.com/mentoring/">Mentoring</a></li>
+</ul>
 {% endmacro %}
+
+{%- block pro_services_header %}
+<h3>Solutions</h3>
+{%- endblock -%}
+
+{%- block pro_services_content -%}
+{{ lets_do_biz() }}
+{%- endblock -%}
 
 {%- block projects_header %}<h3>Other Projects</h3>{% endblock %}
 
-{%- block projects_follow_me %}{{follow_me()}}{{hire_me()}}{%- endblock %}
+{%- block projects_follow_me %}{{follow_me()}}{%- endblock %}
 
 {%- block more_projects %}<p>More open source projects from <a href="https://www.git-pull.com">Tony Narlock</a>:</p>{% endblock %}
 
