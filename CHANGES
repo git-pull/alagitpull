@@ -1,0 +1,10 @@
+=========
+Changelog
+=========
+
+2018-02-16
+==========
+
+- Add HTMLTranslator for opening external links in new window
+
+.. # vim: set filetype=rst:
