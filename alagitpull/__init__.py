@@ -57,6 +57,7 @@ def setup(app):
     app.set_translator('readthedocs', GitPullHTMLTranslator)
 
     app.add_config_value('alagitpull_internal_hosts', ALLOWED_HOSTS, 'html')
+    app.add_config_value('alagitpull_external_hosts_new_window', False, 'html')
 
     return {
         'version': version.__version__,

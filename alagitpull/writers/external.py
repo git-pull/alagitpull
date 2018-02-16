@@ -9,6 +9,24 @@ ALLOWED_HOSTS = [
 ]
 
 
+def is_external_link(url, internal_hosts):
+    """Determine if a URL is internal or external
+
+    :param url: url to check if off-site
+    :type url: string
+    :param hosts: whitelist of host TLD/IP's that are internal
+    :type hosts: list
+    :returns: whether url is internal or external to website
+    :rtype: value
+    """
+    return (
+        not any(url in host for host in internal_hosts) and
+        not url.startswith('#') and
+        not re.match(r'(\.\.)?(\/)?[\w_-]*\.html', url) and
+        not url.startswith('/')
+    )
+
+
 class GitPullHTMLTranslator(HTMLTranslator):
 
     def visit_reference(self, node):
@@ -23,23 +41,23 @@ class GitPullHTMLTranslator(HTMLTranslator):
         - Checks for sphinx builder config, if exists
         """
         atts = {'class': 'reference'}
-        if (self.builder.config and self.builder.config.alagitpull_internal_hosts):  # NOQA
-            hosts = self.builder.config.alagitpull_internal_hosts
-        else:
-            hosts = ALLOWED_HOSTS
+        external_hosts_new_window = False
+        if self.builder.config:
+            if self.builder.config.alagitpull_external_hosts_new_window:
+                external_hosts_new_window = \
+                    self.builder.config.alagitpull_external_hosts_new_window
+            if self.builder.config.alagitpull_internal_hosts:
+                hosts = self.builder.config.alagitpull_internal_hosts
+            else:
+                hosts = ALLOWED_HOSTS
 
         if 'refuri' in node:
             atts['href'] = node['refuri']
-            if (self.settings.cloak_email_addresses and
-                    atts['href'].startswith('mailto:')):
-                atts['href'] = self.cloak_mailto(atts['href'])
-                self.in_mailto = True
             atts['class'] += ' external'
-            if (not any(node['refuri'] in host
-                        for host in hosts) and
-                    not node['refuri'].startswith('#') and
-                    not re.match(r'(\.\.)?(\/)?[\w_-]*\.html', node['refuri']) and  # NOQA
-                    not node['refuri'].startswith('/')):
+            if (
+                external_hosts_new_window and
+                is_external_link(node['refuri'], hosts)
+            ):
                 atts['target'] = '_blank'
                 atts['class'] += ' offsite'
                 # sphinx sites, a ref wrapping a nodes.literal is a code link
