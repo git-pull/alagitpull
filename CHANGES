@@ -2,6 +2,11 @@
 Changelog
 =========
 
+v0.0.19 (2018-02-16)
+====================
+
+- Improve URL matching by extract full TLD (including subdomain)
+
 v0.0.18 (2018-02-16)
 ====================
 
