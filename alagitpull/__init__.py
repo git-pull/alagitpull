@@ -1,7 +1,7 @@
 import os
 
 from alagitpull import _version as version
-
+from .writers.external import GitPullHTMLTranslator
 
 projects = [
     {
@@ -51,5 +51,12 @@ def update_context(app, pagename, templatename, context, doctree):
 
 def setup(app):
     app.connect('html-page-context', update_context)
-    return {'version': version.__version__,
-            'parallel_read_safe': True}
+
+    app.set_translator('html', GitPullHTMLTranslator)
+    # for RTD: https://git.io/vAct0
+    app.set_translator('readthedocs', GitPullHTMLTranslator)
+
+    return {
+        'version': version.__version__,
+        'parallel_read_safe': True,
+    }
