@@ -2,8 +2,8 @@
 Changelog
 =========
 
-2018-02-16
-==========
+v0.0.17 (2018-02-16)
+====================
 
 - Add HTMLTranslator for opening external links in new window
 - Open book / consulting html stuff in new window
