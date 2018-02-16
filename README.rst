@@ -24,8 +24,16 @@ Config options
 
 Inside *conf.py*:
 
+*alagitpull_external_hosts_new_window* (boolean, default: False): check if link 
+is external domain/IP. If so, open in new window.
+
+.. code-block:: python
+
+   alagitpull_external_hosts_new_window = True
+
 *alagitpull_internal_hosts* (list) - whitelist of domains to open
-in same tab, *without* ``target="_blank"``.
+in same tab, *without* ``target="_blank"``. Only used if
+*alagitpull_external_hosts_new_window* enabled.
 
 Example:
 
