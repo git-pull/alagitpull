@@ -19,10 +19,27 @@ https://tmuxp.git-pull.com, etc.
   - Support for subprojects (put into parenthesis)
 - Sidebar CSS tweaks
 
+Config options
+--------------
+
+Inside *conf.py*:
+
+*alagitpull_internal_hosts* (list) - whitelist of domains to open
+in same tab, *without* ``target="_blank"``.
+
+Example:
+
+.. code-block:: python
+
+   alagitpull_internal_hosts = [
+      'libtmux.git-pull.com',
+      '0.0.0.0',
+   ]
+
 Theme options
 -------------
 
-``html_theme_options`` of sphinx's ``conf.py``:
+``html_theme_options`` of sphinx's conf.py:
 
 - *projects* (dict) - Sidebar links.    
 - *project_name* (string) - Name of your project (helps with unlinking
