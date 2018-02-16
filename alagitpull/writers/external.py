@@ -22,7 +22,7 @@ def is_external_link(url, internal_hosts):
     return (
         not any(url in host for host in internal_hosts) and
         not url.startswith('#') and
-        not re.match(r'(\.\.)?(\/)?[\w_-]*\.html', url) and
+        not re.match(r'(\.\.)?(\/)?[\w\/_-]*\.html', url) and
         not url.startswith('/')
     )
 
