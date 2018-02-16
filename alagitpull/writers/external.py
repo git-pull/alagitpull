@@ -20,8 +20,13 @@ class GitPullHTMLTranslator(HTMLTranslator):
         - add class offsite for offsite urls
         - add class insite for insite urls (note, internal is already used
           for reference links in the *same* document)
+        - Checks for sphinx builder config, if exists
         """
         atts = {'class': 'reference'}
+        if (self.builder.config and self.builder.config.alagitpull_internal_hosts):  # NOQA
+            hosts = self.builder.config.alagitpull_internal_hosts
+        else:
+            hosts = ALLOWED_HOSTS
 
         if 'refuri' in node:
             atts['href'] = node['refuri']
@@ -31,7 +36,7 @@ class GitPullHTMLTranslator(HTMLTranslator):
                 self.in_mailto = True
             atts['class'] += ' external'
             if (not any(node['refuri'] in host
-                        for host in ALLOWED_HOSTS) and
+                        for host in hosts) and
                     not node['refuri'].startswith('#') and
                     not re.match(r'(\.\.)?(\/)?[\w_-]*\.html', node['refuri']) and  # NOQA
                     not node['refuri'].startswith('/')):

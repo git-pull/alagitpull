@@ -1,7 +1,7 @@
 import os
 
 from alagitpull import _version as version
-from .writers.external import GitPullHTMLTranslator
+from .writers.external import GitPullHTMLTranslator, ALLOWED_HOSTS
 
 projects = [
     {
@@ -55,6 +55,8 @@ def setup(app):
     app.set_translator('html', GitPullHTMLTranslator)
     # for RTD: https://git.io/vAct0
     app.set_translator('readthedocs', GitPullHTMLTranslator)
+
+    app.add_config_value('alagitpull_internal_hosts', ALLOWED_HOSTS, 'html')
 
     return {
         'version': version.__version__,
