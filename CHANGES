@@ -6,5 +6,6 @@ Changelog
 ==========
 
 - Add HTMLTranslator for opening external links in new window
+- Add config variable: alagitpull_internal_hosts
 
 .. # vim: set filetype=rst:
