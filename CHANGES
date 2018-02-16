@@ -2,6 +2,12 @@
 Changelog
 =========
 
+v0.0.18 (2018-02-16)
+====================
+
+- Improve URL matching of internal ``:doc:`` URLs, especially
+  in cases where URL has a slash in it, e.g. ``:doc:`consulting/page``.
+
 v0.0.17 (2018-02-16)
 ====================
 
