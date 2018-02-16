@@ -3,6 +3,11 @@ import re
 from sphinx.writers.html import HTMLTranslator
 from docutils import nodes
 
+try:
+    from urllib.parse import urlparse
+except ImportError:
+    from urlparse import urlparse
+
 ALLOWED_HOSTS = [
     'git-pull.com',
     '0.0.0.0',
@@ -19,8 +24,9 @@ def is_external_link(url, internal_hosts):
     :returns: whether url is internal or external to website
     :rtype: value
     """
+    tld = urlparse(url).hostname or url
     return (
-        not any(url in host for host in internal_hosts) and
+        not any(tld in host for host in internal_hosts) and
         not url.startswith('#') and
         not re.match(r'(\.\.)?(\/)?[\w\/_-]*\.html', url) and
         not url.startswith('/')
