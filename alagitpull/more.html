@@ -25,6 +25,7 @@
 </ul>
 {% endmacro %}
 
+{%- if theme_show_pro_services == true -%}
 {%- block pro_services_header %}
 <h3>Solutions</h3>
 {%- endblock -%}
@@ -32,6 +33,7 @@
 {%- block pro_services_content -%}
 {{ lets_do_biz() }}
 {%- endblock -%}
+{%- endif -%}
 
 {%- block projects_header %}<h3>Other Projects</h3>{% endblock %}
 

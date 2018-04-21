@@ -22,7 +22,26 @@ https://tmuxp.git-pull.com, etc.
 Config options
 --------------
 
-Inside *conf.py*:
+(Inside *conf.py*)
+
+*html_theme_options* example:
+
+    .. code-block:: python
+
+        html_theme_options = {
+            'logo': 'img/logo.svg',
+            'github_user': 'git-pull',
+            'github_repo': 'alagitpull',
+            'github_type': 'star',
+            'github_banner': True,
+            'projects': {},
+            'project_name': 'my project name',
+        }
+
+For an example of ``html_theme_options['projects']`` see the
+*alagitpull/__init__.py* file.
+
+Variables:
 
 *alagitpull_external_hosts_new_window* (boolean, default: False): check if link 
 is external domain/IP. If so, open in new window.
