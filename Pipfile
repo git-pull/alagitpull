@@ -4,9 +4,9 @@ verify_ssl = true
 name = "pypi"
 
 [dev-packages]
-alabaster = "<0.8"
 
 [packages]
+alabaster = "<0.8"
 
 [requires]
 python_version = "2.7"
