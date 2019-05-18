@@ -2,30 +2,29 @@
 Changelog
 =========
 
+v0.0.23 (2019-05-18)
+====================
+- Fix paths
+
 v0.0.22 (2019-01-01)
 ====================
-
 - Remove mentoring / project links
 
 v0.0.21 (2018-06-23)
 ====================
-
 - Loosen version requirement for alabaster (to <0.8)
 
 v0.0.19 (2018-02-16)
 ====================
-
 - Improve URL matching by extract full TLD (including subdomain)
 
 v0.0.18 (2018-02-16)
 ====================
-
 - Improve URL matching of internal ``:doc:`` URLs, especially
   in cases where URL has a slash in it, e.g. ``:doc:`consulting/page``.
 
 v0.0.17 (2018-02-16)
 ====================
-
 - Add HTMLTranslator for opening external links in new window
 - Open book / consulting html stuff in new window
 - Add config variable: alagitpull_internal_hosts
