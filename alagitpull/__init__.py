@@ -42,7 +42,7 @@ def get_path():
     Shortcut for users whose theme is next to their conf.py.
     """
     # Theme directory is defined as our parent directory
-    return os.path.abspath(os.path.dirname(os.path.dirname(__file__)))
+    return os.path.abspath(os.path.dirname(__file__))
 
 
 def update_context(app, pagename, templatename, context, doctree):
@@ -58,6 +58,8 @@ def setup(app):
 
     app.add_config_value('alagitpull_internal_hosts', ALLOWED_HOSTS, 'html')
     app.add_config_value('alagitpull_external_hosts_new_window', False, 'html')
+
+    app.add_html_theme('alagitpull', get_path())
 
     return {
         'version': version.__version__,
