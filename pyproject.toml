@@ -1,0 +1,16 @@
+[tool.black]
+skip-string-normalization = true
+
+[tool.poetry]
+name = "alagitpull"
+version = "0.0.23"
+description = "Cleverly-named alabaster sub-theme for git-pull projects"
+license = "MIT"
+authors = ["Tony Narlock <tony@git-pull.com>"]
+
+[tool.poetry.scripts]
+sphinx_themes = "alagitpull = alagitpull:get_path"
+
+[tool.poetry.dependencies]
+python = "~2.7 || ^3.5"
+alabaster="<0.8"
