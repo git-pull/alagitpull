@@ -2,6 +2,16 @@
 Changelog
 =========
 
+v0.0.24 (2020-08-04)
+====================
+- New options (unused for now, to pass through to git-pull project
+  templates)
+
+  - ``project_url`` (string) absolute URL for meta tags (e.g. favicons, icons)
+  - ``show_meta_manifest_tag`` (boolean, default False)
+  - ``show_meta_og_tags`` (boolean, default False)
+  - ``show_meta_app_icon_tags`` (boolean, default False)
+
 v0.0.23 (2019-05-18)
 ====================
 - Fix paths
