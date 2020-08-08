@@ -7,6 +7,22 @@ version = "0.0.26rc1"
 description = "Cleverly-named alabaster sub-theme for git-pull projects"
 license = "MIT"
 authors = ["Tony Narlock <tony@git-pull.com>"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "License :: OSI Approved :: MIT License",
+  "Environment :: Web Environment",
+  "Intended Audience :: Developers",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 2.7",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.5",
+  "Programming Language :: Python :: 3.6",
+  "Programming Language :: Python :: 3.7",
+  "Programming Language :: Python :: Implementation :: PyPy",
+  "Topic :: Documentation",
+  "Topic :: Software Development :: Documentation"
+]
 
 [tool.poetry.scripts]
 sphinx_themes = "alagitpull:get_path"
