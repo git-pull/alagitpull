@@ -1,0 +1,53 @@
+[tool.black]
+skip-string-normalization = true
+
+[tool.poetry]
+name = "alagitpull"
+version = "0.0.26rc4"
+description = "Cleverly-named alabaster sub-theme for git-pull projects"
+license = "MIT"
+readme = "README.rst"
+homepage = "https://github.com/git-pull/alagitpull"
+keywords = ["sphinx", "theme", "sphinx-theme", "alabaster"]
+authors = ["Tony Narlock <tony@git-pull.com>"]
+
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "License :: OSI Approved :: MIT License",
+  "Environment :: Web Environment",
+  "Intended Audience :: Developers",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 2.7",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.5",
+  "Programming Language :: Python :: 3.6",
+  "Programming Language :: Python :: 3.7",
+  "Programming Language :: Python :: Implementation :: PyPy",
+  "Topic :: Documentation",
+  "Topic :: Software Development :: Documentation"
+]
+
+[tool.poetry.urls]
+"Bug Tracker" = "https://github.com/git-pull/alagitpull/issues"
+"Repository" = "https://github.com/git-pull/alagitpull"
+"Documentation" = "https://github.com/git-pull/alagitpull"
+
+[tool.poetry.scripts]
+sphinx_themes = "alagitpull:get_path"
+
+[tool.poetry.plugins."sphinx_themes"]
+"alagitpull" = "alagitpull:get_path"
+# entry_points={
+#     'sphinx_themes': [
+#         'alagitpull = alagitpull:get_path',
+#     ]
+# }
+
+[tool.poetry.dependencies]
+python = "~2.7 || ^3.5"
+alabaster="<0.8"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
