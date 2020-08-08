@@ -33,20 +33,56 @@ To configure, *conf.py*:
 
 *html_theme_options* example:
 
-    .. code-block:: python
+.. code-block:: python
 
-        html_theme_options = {
-            'logo': 'img/logo.svg',
-            'github_user': 'git-pull',
-            'github_repo': 'alagitpull',
-            'github_type': 'star',
-            'github_banner': True,
-            'projects': {},
-            'project_name': 'my project name',
-        }
+   html_theme_options = {
+       'logo': 'img/logo.svg',
+       'github_user': 'git-pull',
+       'github_repo': 'alagitpull',
+       'github_type': 'star',
+       'github_banner': True,
+       'projects': {},
+       'project_name': 'my project name',
+   }
 
 For an example of ``html_theme_options['projects']`` see the
 *alagitpull/__init__.py* file.
+
+Example of using an optional variable such as
+``theme_show_meta_app_icons_tags``:
+
+.. code-block:: python
+
+   html_theme_options = {
+       # ...usual stuff, as above, and
+       'project_description': 'description of project'
+   }
+
+
+.. code-block:: html
+
+   {%- if theme_show_meta_app_icon_tags == true %}
+   <meta name="theme-color" content="#ffffff">
+   <meta name="application-name" content="{{ theme_project_description }}">
+
+   <link rel="shortcut icon" href="/_static/favicon.ico">
+   <link rel="icon" type="image/png" sizes="512x512" href="/_static/img/icons/icon-512x512.png">
+   <link rel="icon" type="image/png" sizes="192x192" href="/_static/img/icons/icon-192x192.png">
+   <link rel="icon" type="image/png" sizes="32x32" href="/_static/img/icons/icon-32x32.png">
+   <link rel="icon" type="image/png" sizes="96x96" href="/_static/img/icons/icon-96x96.png">
+   <link rel="icon" type="image/png" sizes="16x16" href="/_static/img/icons/icon-16x16.png">
+
+   <!-- Apple -->
+   <meta name="apple-mobile-web-app-title" content="{{ theme_project_name }}">
+
+   <link rel="apple-touch-icon" sizes="192x192" href="/_static/img/icons/icon-192x192.png">
+   <link rel="mask-icon" href="/_static/img/{{ theme_project_name }}.svg" color="grey">
+
+   <!-- Microsoft -->
+   <meta name="msapplication-TileColor" content="#ffffff">
+   <meta name="msapplication-TileImage" content="/_static/img/icons/ms-icon-144x144.png">
+   {% endif -%}
+
 
 Variables
 """""""""
