@@ -2,6 +2,17 @@
 Changelog
 =========
 
+v0.0.25 (2020-08-08)
+====================
+- New options. Like with v0.0.24, these are optional, pass through
+  variables. You can use them in your own HTML template overrides.
+
+  - ``project_title`` (string) 
+  - ``project_description`` (string)
+  - ``project_license`` (string)
+  - ``project_static_file_url`` (string)
+  - ``project_author`` (string)
+
 v0.0.24 (2020-08-04)
 ====================
 - New options (unused for now, to pass through to git-pull project
