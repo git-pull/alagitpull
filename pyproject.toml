@@ -28,6 +28,11 @@ classifiers = [
   "Topic :: Software Development :: Documentation"
 ]
 
+[tool.poetry.urls]
+"Bug Tracker" = "https://github.com/git-pull/alagitpull/issues"
+"Repository" = "https://github.com/git-pull/alagitpull"
+"Documentation" = "https://github.com/git-pull/alagitpull"
+
 [tool.poetry.scripts]
 sphinx_themes = "alagitpull:get_path"
 
