@@ -22,7 +22,14 @@ https://tmuxp.git-pull.com, etc.
 Config options
 --------------
 
-(Inside *conf.py*)
+Theme variables
+"""""""""""""""
+
+To see a full list of options passible to HTML templates, see
+``theme.conf``. Not all of these options are used in the theme itself,
+but to let ``html_theme_options`` pass them through, if you want.
+
+To configure, *conf.py*:
 
 *html_theme_options* example:
 
@@ -41,7 +48,8 @@ Config options
 For an example of ``html_theme_options['projects']`` see the
 *alagitpull/__init__.py* file.
 
-Variables:
+Variables
+"""""""""
 
 *alagitpull_external_hosts_new_window* (boolean, default: False): check if link 
 is external domain/IP. If so, open in new window.
