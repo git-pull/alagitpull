@@ -3,7 +3,7 @@ skip-string-normalization = true
 
 [tool.poetry]
 name = "alagitpull"
-version = "0.0.26rc4"
+version = "0.1.0"
 description = "Cleverly-named alabaster sub-theme for git-pull projects"
 license = "MIT"
 readme = "README.rst"

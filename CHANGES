@@ -2,6 +2,10 @@
 Changelog
 =========
 
+v0.1.0 (2020-08-08)
+===================
+- Move project to poetry
+
 v0.0.25 (2020-08-08)
 ====================
 - New options. Like with v0.0.24, these are optional, pass through
