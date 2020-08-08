@@ -31,6 +31,14 @@ classifiers = [
 [tool.poetry.scripts]
 sphinx_themes = "alagitpull:get_path"
 
+[tool.poetry.plugins."sphinx_themes"]
+"alagitpull" = "alagitpull:get_path"
+# entry_points={
+#     'sphinx_themes': [
+#         'alagitpull = alagitpull:get_path',
+#     ]
+# }
+
 [tool.poetry.dependencies]
 python = "~2.7 || ^3.5"
 alabaster="<0.8"
