@@ -6,7 +6,11 @@ name = "alagitpull"
 version = "0.0.26rc3"
 description = "Cleverly-named alabaster sub-theme for git-pull projects"
 license = "MIT"
+readme = "README.rst"
+homepage = "https://github.com/git-pull/alagitpull"
+keywords = ["sphinx", "theme", "sphinx-theme", "alabaster"]
 authors = ["Tony Narlock <tony@git-pull.com>"]
+
 classifiers = [
   "Development Status :: 4 - Beta",
   "License :: OSI Approved :: MIT License",
