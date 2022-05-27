@@ -25,7 +25,7 @@ classifiers = [
   "Programming Language :: Python :: 3.7",
   "Programming Language :: Python :: Implementation :: PyPy",
   "Topic :: Documentation",
-  "Topic :: Software Development :: Documentation"
+  "Topic :: Software Development :: Documentation",
 ]
 
 [tool.poetry.urls]
@@ -46,7 +46,7 @@ sphinx_themes = "alagitpull:get_path"
 
 [tool.poetry.dependencies]
 python = "~2.7 || ^3.5"
-alabaster="<0.8"
+alabaster = "<0.8"
 
 [build-system]
 requires = ["poetry>=0.12"]
