@@ -17,12 +17,17 @@ ALLOWED_HOSTS = [
 def is_external_link(url, internal_hosts):
     """Determine if a URL is internal or external
 
-    :param url: url to check if off-site
-    :type url: string
-    :param hosts: whitelist of host TLD/IP's that are internal
-    :type hosts: list
-    :returns: whether url is internal or external to website
-    :rtype: value
+    Parameters
+    ----------
+    url : str
+        url to check if off-site
+    hosts : str
+        whitelist of host TLD/IP's that are internal
+
+    Returns
+    -------
+    bool
+        whether url is internal or external to website
     """
     tld = urlparse(url).hostname or url
     return (
